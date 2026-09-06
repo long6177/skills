@@ -88,6 +88,23 @@ skill-git-helper/
 
 **三层防护边界**：本 skill 的 danger.md 是教育与确认话术层（会话内约束）；硬拦截属 hook 领域（git-guardrails 已验证的 PreToolUse 路线），README 中作为搭配建议提及，不内置。
 
+### 3.1 逐节溯源（section 级）
+
+三类来源：**① 提炼自其他 skill**（骨架跟随、血肉重写）／**② 改编自官方规范或社区通用知识**（非抄自 skill，也非原创，如 Conventional Commits 规范本身）／**③ 原创**（主要为调研发现的无人区内容）。
+
+| 文件 | ① 提炼自其他 skill | ② 改编官方/社区知识 | ③ 原创 |
+| --- | --- | --- | --- |
+| worktree.md | **浓度最高**。开工篇整体来自 obra@using-git-worktrees：隔离检测（`GIT_DIR` vs `GIT_COMMON`）、submodule 防误判、建前征询、原生工具优先、`.worktrees/` 优先级 + `check-ignore` 强制验证、装依赖 + 基线测试；收尾篇来自 obra@finishing-a-development-branch：先验证测试再给选项、四选项菜单、清理命令；速查表压缩改编自 obra 同名表 | — | "为什么用 worktree"引言（用户阅读 vs Agent 干活场景）；"拿不准先给分支尖端打 tag"的兜底 |
+| commit.md | §3 暂存来自 awesome-copilot@git-commit：diff 分析三命令、逻辑分组、`add -p`、机密清单；§4 风格提炼自 caveman-commit **理念**：why over what、祈使语气、无句号、无 AI 署名、50/72 字符 | §5 完整规范改编自 conventionalcommits.org | §1 何时提交、§2 粒度自检（无人区②）；untracked 堆积转 ignore 治理的胶水；"直提后示 + amend 返工"交互 |
+| danger.md | 第 1-5 条骨架来自 mattpocock@git-guardrails 拦截列表（force push、reset --hard、clean -f、branch -D、checkout ./restore .）；第 6-9 条改写自 awesome-copilot@git-commit 的 Git Safety Protocol | — | 每条的"更安全替代"与全部确认话术；补救篇（先吊销凭据 → filter-repo/BFG → 通知协作者重新 clone）；hook 边界说明 |
+| repo-ops.md | §2 来自 awesome-copilot：`gh` 命令组合（@gh-cli）、triage 流程（@github-issues） | — | §1 体检清单表；§3 合并方式取舍表（含"AI 重度工作流默认 squash"）；§4 Actions 基础与 flaky 识别；§5 release |
+| ignore-governance.md | —（生态空白，无可提炼） | 四类内置模板为社区通行 gitignore 模式（完整参考 github/gitignore）；`rm --cached` 为 git 标准知识 | **几乎全部**：所有权判定规则的形式化、三分类处置路径、与补救篇的衔接 |
+| fork-upstream.md | PR 描述规范小段（what/why/how tested、用仓库模板）来自 awesome-copilot@create-github-pull-request | `origin`/`upstream` 约定、`--ff-only` 同步为社区标准实践 | fork 前三问；"只 rebase 自己的 PR 分支"；完事前同步检查；礼仪大部分 |
+| concepts.md | —（无先例） | 卡片知识为 git/GitHub 通用语义 | 16 张卡选题（grilling 定稿）、"≤5 行 + 预留空位"机制、"和你什么有关"的写法 |
+| SKILL.md | 一条模式借自 obra：尊重用户已声明偏好、不再重复询问（其 consent 设计） | — | 维护模式、风险分级清单、快检序列、输出格式、路由表、hook 边界声明 |
+
+提炼浓度：worktree.md ≈ danger.md（骨架）> commit.md ≈ repo-ops.md > fork-upstream.md；**ignore-governance.md 与 concepts.md 为纯原创**，对应调研发现的两个最大空白点。与各文件头部的出处注释互为印证：注释管"哪一行抄了谁"，本表管"为什么这么分工"。
+
 ## 4. 非目标
 
 - 不做 commit message 生成之外的全自动 git 代办（决策权在用户）
