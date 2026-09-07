@@ -80,4 +80,4 @@ git remote -v                               # remotes
 - `danger.md` educates and scripts confirmations **within a loaded session**. Always-on interception of dangerous commands is hook territory (PreToolUse hooks; see git-guardrails) — recommend it, don't emulate it.
 - Repo ops stop at reading and basic operations. Writing GitHub Actions workflows is out of scope.
 
-<!-- Extracted workflows credit: obra/superpowers, github/awesome-copilot, mattpocock/skills, juliusbrussee/caveman (all MIT). Per-file attributions in references/ headers; design rationale in docs/design.md. -->
+<!-- Extracted workflows credit: obra/superpowers, github/awesome-copilot, mattpocock/skills, juliusbrussee/caveman (all MIT). Per-file attributions in references/ headers. -->

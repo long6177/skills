@@ -30,7 +30,6 @@ or copy the repo folder into your agent's skills directory.
 ```
 SKILL.md              flow skeleton: mode, principles, risk tiers, health check, routing
 references/*.md       on-demand knowledge, loaded per scene
-docs/design.md        design rationale and research lineage (Chinese)
 ```
 
 ## Credits
