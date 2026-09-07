@@ -1,5 +1,7 @@
 # git-helper
 
+[![skills.sh](https://skills.sh/b/long6177/skill-git-helper)](https://skills.sh/long6177/skill-git-helper)
+
 A single-file-plus-references [agent skill](https://agentskills.io) that helps developers with git basics maintain their Git/GitHub repository state while coding with AI agents.
 
 **Design stance:** explain, suggest, let the user decide. The skill runs only when explicitly invoked (passive by design — it never hijacks your coding session), stays in "maintenance mode" for the session, and routes deep knowledge through `references/` on demand.
@@ -18,7 +20,7 @@ A single-file-plus-references [agent skill](https://agentskills.io) that helps d
 ## Install
 
 ```bash
-npx skills add <owner>/skill-git-helper@git-helper
+npx skills add long6177/skill-git-helper@git-helper
 ```
 
 or copy the repo folder into your agent's skills directory.

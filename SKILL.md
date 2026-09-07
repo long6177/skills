@@ -1,6 +1,7 @@
 ---
 name: git-helper
 description: Git and GitHub repository state maintenance assistant for AI coding sessions. Covers repo health checks, commit rhythm and Conventional Commits messages, smart staging, .gitignore vs .git/info/exclude governance, worktree isolation lifecycle, fork/upstream sync and PR etiquette, maintainer-side repo ops (issues, PR review, CI basics, releases), and dangerous-command awareness. Use ONLY when the user explicitly invokes it (e.g. "$git-helper", "help me check my git state", "help me maintain this repo"). NEVER invoke it on your own during ordinary coding tasks.
+license: MIT
 ---
 
 # git-helper — Git/GitHub State Maintenance Assistant
