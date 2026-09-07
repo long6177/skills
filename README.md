@@ -20,16 +20,17 @@ A single-file-plus-references [agent skill](https://agentskills.io) that helps d
 ## Install
 
 ```bash
-npx skills add long6177/skill-git-helper@git-helper
+npx skills add long6177/skill-git-helper
 ```
 
-or copy the repo folder into your agent's skills directory.
+Only the `skills/git-helper/` folder is installed into your agent's skills directory — this README and repo-level files never enter the skill payload.
 
 ## Structure
 
 ```
-SKILL.md              flow skeleton: mode, principles, risk tiers, health check, routing
-references/*.md       on-demand knowledge, loaded per scene
+skills/git-helper/
+├── SKILL.md          flow skeleton: mode, principles, risk tiers, health check, routing
+└── references/*.md   on-demand knowledge, loaded per scene
 ```
 
 ## Credits
