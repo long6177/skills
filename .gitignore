@@ -1,0 +1,15 @@
+# Agent skill installs — regenerated locally by the `skills` CLI.
+# Never commit these: they are per-machine installs, and they would duplicate
+# the first-party skills tracked under skills/ (confusing skills.sh discovery).
+.agents/
+.claude/
+skills-lock.json
+
+# Local eval / iteration workspace (contains nested git repositories).
+skill-git-helper-workspace/
+
+# OS / editor junk.
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

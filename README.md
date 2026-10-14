@@ -1,12 +1,42 @@
-# git-helper
+# skills
 
-[![skills.sh](https://skills.sh/b/long6177/skill-git-helper)](https://skills.sh/long6177/skill-git-helper)
+[![skills.sh](https://skills.sh/b/long6177/skills)](https://skills.sh/long6177/skills)
 
-A single-file-plus-references [agent skill](https://agentskills.io) that helps developers with git basics maintain their Git/GitHub repository state while coding with AI agents.
+A collection of first-party [agent skills](https://agentskills.io) by [@long6177](https://github.com/long6177), published to [skills.sh](https://skills.sh). Each skill is self-contained under `skills/<name>/`, so any of them can be installed on its own or together.
+
+## Skills
+
+| Skill | What it does |
+| --- | --- |
+| [git-helper](skills/git-helper/) | Helps developers keep their Git/GitHub repository state healthy while coding with AI agents — explain, suggest, let the user decide. |
+
+## Install
+
+```bash
+# install every skill in this repo
+npx skills add long6177/skills
+
+# or pick a single skill
+npx skills add long6177/skills --skill git-helper
+```
+
+Only the selected `skills/<name>/` folder is installed into your agent's skills directory — this README and other repo-level files never enter the skill payload.
+
+## Structure
+
+```
+skills/<name>/
+├── SKILL.md          entry point: mode, principles, risk tiers, health check, routing
+└── references/*.md   on-demand knowledge, loaded per scene
+```
+
+## git-helper
+
+A single-file-plus-references skill that helps developers with git basics maintain their Git/GitHub repository state while coding with AI agents.
 
 **Design stance:** explain, suggest, let the user decide. The skill runs only when explicitly invoked (passive by design — it never hijacks your coding session), stays in "maintenance mode" for the session, and routes deep knowledge through `references/` on demand.
 
-## Covers
+Covers:
 
 - **Repo health check** — layered quick check (read-only, ~2s) + one-line status report, ≤3 suggestions with why + risk level
 - **Commit rhythm & messages** — when to commit, granularity, smart staging, full Conventional Commits spec
@@ -16,22 +46,6 @@ A single-file-plus-references [agent skill](https://agentskills.io) that helps d
 - **Repo ops** — issues/labels triage, PR review & merge methods, Actions basics, releases (maintainer view)
 - **Danger playbook** — destructive commands with impact, safer alternatives, and confirmation scripts; committed-secrets remediation
 - **Concept cards** — 16 git/GitHub cards, answered on request only
-
-## Install
-
-```bash
-npx skills add long6177/skill-git-helper
-```
-
-Only the `skills/git-helper/` folder is installed into your agent's skills directory — this README and repo-level files never enter the skill payload.
-
-## Structure
-
-```
-skills/git-helper/
-├── SKILL.md          flow skeleton: mode, principles, risk tiers, health check, routing
-└── references/*.md   on-demand knowledge, loaded per scene
-```
 
 ## Credits
 
