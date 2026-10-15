@@ -9,6 +9,7 @@ A collection of first-party [agent skills](https://agentskills.io) by [@long6177
 | Skill | What it does |
 | --- | --- |
 | [git-helper](skills/git-helper/) | Keeps your Git/GitHub repository state healthy while an AI agent writes code — health check, commit rhythm, worktrees, ignore governance, and a danger playbook. Explain, suggest, let you decide. |
+| [test-agents](skills/test-agents/) | Gives different `harness`/LLM combinations the same start — an isolated git worktree off one commit, the same task, a kept branch. Don't benchmark; just compare. Invoke as `/test-agents`. |
 
 ## Install
 
@@ -18,6 +19,7 @@ npx skills add long6177/skills
 
 # or pick a single skill
 npx skills add long6177/skills --skill git-helper
+npx skills add long6177/skills --skill test-agents
 ```
 
 Only the selected `skills/<name>/` folder is installed into your agent's skills directory — this README and other repo-level files never enter the skill payload. Every skill keeps its own showcase page at `skills/<name>/README.md`.
