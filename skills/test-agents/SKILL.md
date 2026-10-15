@@ -48,7 +48,8 @@ git worktree add -b <harness>/<llm> ./.worktree/<harness>-<llm> <base>
 All subsequent tasks are completed inside that worktree.  
 Do not modify the main working tree.  
 Do not change the task's implementation approach, scope, style, or judgment because of this skill.
-You may read files from the main working tree and copy needed local files into the worktree.
+You may read files from the main working tree and copy needed local files into the worktree.  
+Other worktrees (the sibling directories under `./.worktree/`) and their branches do not exist for you: do not read, copy, reference, or reuse anything from them.
 
 ## Completion
 
@@ -80,3 +81,4 @@ If the removal fails, report the reason; do not force-remove.
 - Do not delete branches.
 - Do not push.
 - Do not modify the main working tree.
+- Do not read, copy, reference, or reuse content from other worktrees or their branches.
