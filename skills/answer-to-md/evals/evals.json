@@ -1,0 +1,17 @@
+{
+  "skill_name": "answer-to-md",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "$answer-to-md 请解释事件循环、微任务和宏任务之间的关系，并给出一个简短的 JavaScript 示例。",
+      "expected_output": "The new request is answered completely in a non-empty UTF-8 .md file under the environment-designated output directory; chat contains only a concise completion message and a clickable file link.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Conversation context: the assistant has just given a substantive Markdown-formatted comparison of REST and GraphQL. The user then sends only `$answer-to-md`. Save the prior answer without summarizing or updating it, adding a top-level heading only if one is absent.",
+      "expected_output": "The most recent substantive assistant answer is preserved in a non-empty UTF-8 .md file; a prior skill confirmation-only message is ignored, and chat contains only a concise completion message and a clickable file link.",
+      "files": []
+    }
+  ]
+}
