@@ -23,7 +23,7 @@ Invoke it explicitly and it does one thing — set up a fair, isolated run:
 ```
 
 - **Same start** — every run branches from the same base commit. `base` is optional (default `HEAD`); describe a commit in plain language and the agent finds it in `git log`.
-- **No interference** — each combination gets its own `git worktree` at `./.worktree/<harness>-<llm>`; the main working tree is never modified.
+- **No interference** — each combination gets its own `git worktree` at `./.worktrees/<harness>-<llm>`; the main working tree is never modified.
 - **Parallel comparison** — run two or more combinations at once; no queueing.
 - **Low intrusion** — the skill carries only Git instructions. It does not change your task's approach, scope, style, or judgment.
 - **Traceable** — the worktree is removed at the end, but the branch is kept: cut to it and try the result yourself. It never merges, pushes, or deletes the branch.

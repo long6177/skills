@@ -33,14 +33,14 @@ The user explicitly invokes:
 
 5. Use this worktree path:
 
-   `./.worktree/<harness>-<llm>`
+   `./.worktrees/<harness>-<llm>`
 
-6. If `./.worktree` does not exist, create the directory first.
+6. If `./.worktrees` does not exist, create the directory first.
 7. If the branch already exists, or the worktree path already exists, report to the user and ask; do not overwrite.
 8. Create the worktree:
 
 ```bash
-git worktree add -b <harness>/<llm> ./.worktree/<harness>-<llm> <base>
+git worktree add -b <harness>/<llm> ./.worktrees/<harness>-<llm> <base>
 ```
 
 ## Work
@@ -49,7 +49,7 @@ All subsequent tasks are completed inside that worktree.
 Do not modify the main working tree.  
 Do not change the task's implementation approach, scope, style, or judgment because of this skill.
 You may read files from the main working tree and copy needed local files into the worktree.  
-Other worktrees (the sibling directories under `./.worktree/`) and their branches do not exist for you: do not read, copy, reference, or reuse anything from them.
+Other worktrees (the sibling directories under `./.worktrees/`) and their branches do not exist for you: do not read, copy, reference, or reuse anything from them.
 
 ## Completion
 
@@ -65,7 +65,7 @@ Other worktrees (the sibling directories under `./.worktree/`) and their branche
 3. Remove the worktree from the main working tree:
 
 ```bash
-git worktree remove ./.worktree/<harness>-<llm>
+git worktree remove ./.worktrees/<harness>-<llm>
 ```
 
 Do not delete the branch, do not merge the branch, do not push.  
