@@ -9,7 +9,7 @@ A collection of first-party [agent skills](https://agentskills.io) by [@long6177
 | Skill | What it does |
 | --- | --- |
 | [git-helper](skills/git-helper/) | Keeps your Git/GitHub repository state healthy while an AI agent writes code — health check, commit rhythm, worktrees, ignore governance, and a danger playbook. Explain, suggest, let you decide. |
-| [test-agents](skills/test-agents/) | Gives different `harness`/LLM combinations the same start — an isolated git worktree off one commit, the same task, a kept branch. Don't benchmark; just compare. Invoke as `/test-agents`. |
+| [worktree-run](skills/worktree-run/) | Gives different `harness`/LLM combinations the same start — a separate git worktree pinned to one base commit, the same task, a kept branch. Don't benchmark; just compare. Invoke as `/worktree-run`. |
 | [answer-to-md](skills/answer-to-md/) | Writes the assistant's complete answer to a UTF-8 Markdown file instead of a chat wall — formatting kept, timestamped filename, chat reply is just a link. Invoke as `$answer-to-md`. |
 
 ## Install
@@ -20,7 +20,7 @@ npx skills add long6177/skills
 
 # or pick a single skill
 npx skills add long6177/skills --skill git-helper
-npx skills add long6177/skills --skill test-agents
+npx skills add long6177/skills --skill worktree-run
 npx skills add long6177/skills --skill answer-to-md
 ```
 

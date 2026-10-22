@@ -8,7 +8,7 @@ skills-lock.json
 # Local eval / iteration workspace (contains nested git repositories).
 skill-git-helper-workspace/
 
-# git worktrees created by the test-agents skill (nested repositories).
+# git worktrees created by the worktree-run skill (nested repositories).
 .worktrees/
 
 # OS / editor junk.
