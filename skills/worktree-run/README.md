@@ -60,3 +60,7 @@ Not a benchmark, not an eval framework, not a scheduler — a git scaffold for p
 ## License
 
 MIT
+
+---
+
+Why the skill looks like this — and which alternatives were already rejected — is in [DECISIONS.md](DECISIONS.md).
