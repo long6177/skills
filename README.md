@@ -11,6 +11,7 @@ A collection of first-party [agent skills](https://agentskills.io) by [@long6177
 | [git-helper](skills/git-helper/) | Keeps your Git/GitHub repository state healthy while an AI agent writes code — health check, commit rhythm, worktrees, ignore governance, and a danger playbook. Explain, suggest, let you decide. |
 | [worktree-run](skills/worktree-run/) | Gives different `harness`/LLM combinations the same start — a separate git worktree pinned to one base commit, the same task, a kept branch. Don't benchmark; just compare. Invoke as `/worktree-run`. |
 | [answer-to-md](skills/answer-to-md/) | Writes the assistant's complete answer to a UTF-8 Markdown file instead of a chat wall — formatting kept, timestamped filename, chat reply is just a link. Invoke as `$answer-to-md`. |
+| [no-more-unknown](skills/no-more-unknown/) | Explains concepts, plans, and code in words you already know — no circular definitions, and a list of the words it left undefined. Invoke as `/no-more-unknown`. |
 
 ## Install
 
@@ -22,6 +23,7 @@ npx skills add long6177/skills
 npx skills add long6177/skills --skill git-helper
 npx skills add long6177/skills --skill worktree-run
 npx skills add long6177/skills --skill answer-to-md
+npx skills add long6177/skills --skill no-more-unknown
 ```
 
 Only the selected `skills/<name>/` folder is installed into your agent's skills directory — this README and other repo-level files never enter the skill payload. Every skill keeps its own showcase page at `skills/<name>/README.md`.
