@@ -56,3 +56,5 @@
 2. 新规则写进 SKILL.md 对应段落；**理由写进本文件**，两边不重复。
 3. 改读取/隔离策略前先看本文"已否掉的替代"，避免绕回原路。
 4. 改完用临时仓库跑一遍验收清单（见上），再动真实仓库。
+5. **frontmatter `description` 只写触发条件**（何时用、不要自动触发），**不写参数格式**——它只是路由摘要，塞 `<harness> <llm> [base]` 会在 catalog 里被转义成 `&lt;harness&gt;` 之类的噪音，也不承担解析职责。参数格式只出现在正文 `## Invocation`。
+6. 动 SKILL.md 后记得同步已装副本（`~/.agents/skills/worktree-run/` 是实体，`.claude` / `.codebuddy` 是指向它的 junction，`.workbuddy` 是独立副本），否则本地跑的仍是旧规则。

@@ -1,6 +1,6 @@
 ---
 name: worktree-run
-description: Use only when the user explicitly invokes `/worktree-run <harness> <llm> [base]`. Runs the current task in a separate git worktree pinned to one base commit, and leaves the result on a kept branch. Do not invoke automatically.
+description: Use only when the user explicitly invokes it. Runs the current task in a separate git worktree pinned to one base commit, and leaves the result on a kept branch. Do not invoke automatically.
 ---
 
 # worktree-run
