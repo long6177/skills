@@ -1,6 +1,6 @@
 ---
 name: worktree-run
-description: Use only when the user explicitly invokes it. Runs the current task in a separate git worktree pinned to one base commit, and leaves the result on a kept branch. Do not invoke automatically.
+description: Use only when the user explicitly invokes `/worktree-run <harness> <llm> [base]`. Runs the current task in a separate git worktree pinned to one base commit, and leaves the result on a kept branch. Do not invoke automatically.
 ---
 
 # worktree-run
@@ -8,6 +8,16 @@ description: Use only when the user explicitly invokes it. Runs the current task
 Git rules only, and only for this run. They do not change the task: same approach, scope, judgment.
 Other runs of the task may exist under `.worktrees/`; they are not yours. Once the report line is
 written, none of these rules apply to later tasks. Do not mention this skill beyond that line.
+
+## Invocation
+
+```
+/worktree-run <harness> <llm> [base]
+```
+
+- `<harness>`, `<llm>`: taken verbatim from the user; never inferred, completed or guessed. Missing
+  either one → ask, and do nothing else first.
+- `[base]`: optional, `HEAD` by default. Resolve it once in step 1 below and keep the SHA.
 
 ## Reading
 
