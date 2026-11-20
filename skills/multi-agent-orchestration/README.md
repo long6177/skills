@@ -2,25 +2,26 @@
 
 [![skills.sh](https://skills.sh/b/long6177/skills)](https://skills.sh/long6177/skills)
 
-**Your context is the budget. Spend it on decisions, not on searching.** When a task splits into several substantial workstreams, this skill makes the agent run them as an orchestrator — splitting the work, briefing each subagent properly, dispatching in parallel, checking what comes back, and integrating one result you can defend.
+**Don't do everything in one context. Orchestrate.** When a task splits into several substantial workstreams, this skill has the agent act as the central orchestrator: delegate the independent pieces to native subagents, stay accountable for the whole, and synthesize one coherent result.
 
 ## Why it exists
 
-Subagents are easy to call and easy to waste. A vague brief comes back vague; a child that pastes its raw material into the parent has spent the context it was hired to save; a result accepted on faith quietly becomes a wrong answer. The skill is the discipline that turns delegation from a gesture into a mechanism.
+A single context degrades as a task grows: the plan, the evidence, and the output all compete for the same window. Subagents solve that — but only if someone stays in charge of the objective instead of spraying tasks at children and hoping the pieces fit. This skill is that discipline.
 
 ## What it does
 
-- **Split** — cut the task at its seams: one objective, one owner, one deliverable per workstream, with no two writing the same file.
-- **Brief** — objective, context the child cannot discover, scope, deliverable shape, and the check that says done. The brief is the child's whole world, so it carries everything.
-- **Dispatch** — independent work in one step, dependent work after its input returns, and small lookups kept in the parent where the brief would cost more than the work.
-- **Verify** — a result is a claim until checked against the evidence pointer it came with; the claims that decide the outcome get re-checked by the orchestrator.
-- **Integrate** — one coherent answer, seams resolved, and any failed or skipped workstream named rather than left as a silent hole.
+1. **Delegate proactively** — split off independent or loosely coupled workstreams whenever delegation improves focus, parallelism, or context management.
+2. **Stay in control** — remain responsible for the objective, priorities, coordination, important decisions, and the final outcome.
+3. **Assign focused tasks** — each subagent gets a clear objective, relevant context, constraints, and an expected deliverable; no vague or overlapping assignments.
+4. **Coordinate intelligently** — independent work in parallel, dependent work sequenced, no conflicting changes to shared resources.
+5. **Synthesize results** — review outputs, verify important findings, resolve disagreements, integrate one coherent outcome.
+6. **Use good judgment** — no subagents for trivial tasks, and none when coordination costs more than it saves.
 
-## The part worth stealing
+## The stance worth stealing
 
-> **Conclusions with evidence pointers, not raw material.**
+> **Use the native subagent capabilities of the current environment. Do not assume or prescribe any particular tool, command, or delegation API.**
 
-Ask for `path:line`, a command, or a URL, and the parent context stays small enough to hold the whole task. Ask for "the full file contents" and you have re-created the problem the subagent was meant to solve.
+The skill governs judgment, not plumbing — it works with whatever delegation mechanism your harness ships, and stays valid when that mechanism changes.
 
 ## Install
 
@@ -30,9 +31,9 @@ npx skills add long6177/skills --skill multi-agent-orchestration
 
 ## Boundaries
 
-- Not a workflow engine, not a scheduler, and not a replacement for doing the work: it governs judgment and discipline, and defers to whatever native delegation mechanism the environment provides.
-- Delegation is not free — the skill's own test is whether a workstream is substantial enough to pay for its brief, dispatch, verification, and integration.
-- It does not guarantee parallelism: when workstreams share a decision or a file, it sequences them.
+- Not a workflow engine or a scheduler: it changes how the agent decides and coordinates, not what tools exist.
+- Delegation is not free — the skill's own sixth point is the brake on spawning subagents that cost more than they return.
+- It does not promise parallelism: workstreams that share a decision or a resource are sequenced.
 
 ## License
 

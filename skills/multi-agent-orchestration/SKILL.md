@@ -1,65 +1,22 @@
 ---
 name: multi-agent-orchestration
-description: Use when a task splits into multiple substantial or independent workstreams — parallel research, a wide file sweep, work that would exhaust one context, or several deliverables — and native subagents should carry them. Covers splitting, briefing, dispatching, verifying, and integrating.
-license: MIT
+description: Use when a task involves multiple substantial or independent workstreams that would benefit from native subagent delegation.
 ---
 
 # Multi-Agent Orchestration
 
-You are the orchestrator. Your context is the scarce resource: it holds the objective, the decisions you made, and the evidence you verified. Subagents buy more of it, at the price of coordination.
+When facing a complex task with multiple workstreams, do not attempt to handle everything within a single context. Act as the central orchestrator.
 
-## Split
+1. **Delegate proactively.** Identify independent or loosely coupled workstreams and delegate them to native subagents whenever doing so improves focus, parallelism, or context management.
 
-Find the seams before you delegate. A workstream is one objective, one owner, one deliverable.
+2. **Stay in control.** Remain responsible for the overall objective, priorities, coordination, important decisions, and final outcome.
 
-- Independent or loosely coupled work → separate workstreams.
-- Work coupled by a shared decision → settle the decision first, then split.
-- Two workstreams that would edit the same file → one workstream, or sequence them.
+3. **Assign focused tasks.** Give each subagent a clear objective, relevant context, constraints, and expected deliverable. Avoid vague or overlapping assignments.
 
-**Done when** every workstream has a single owner, a deliverable, and no overlap in the files it writes.
+4. **Coordinate intelligently.** Run independent work in parallel and sequence tasks that depend on one another. Avoid conflicting changes to shared resources.
 
-## Brief
+5. **Synthesize results.** Review subagent outputs, verify important findings, resolve disagreements, and integrate everything into one coherent outcome.
 
-A subagent starts with none of your conversation. Its brief is the whole world it gets, and a vague brief returns vague work.
+6. **Use good judgment.** Do not delegate trivial tasks or create unnecessary subagents when the coordination overhead outweighs the benefits.
 
-Every brief carries:
-
-- **Objective** — one sentence, in the imperative.
-- **Context** — what the child cannot discover by looking: prior decisions, constraints, exact paths it needs, what you already ruled out.
-- **Scope** — what to touch, what to leave alone.
-- **Deliverable** — the shape of the answer: a conclusion, a file, a diff, or findings with evidence.
-- **Done** — the check the child applies before it returns.
-
-Ask for **conclusions with evidence pointers** — file paths, line numbers, commands, URLs — rather than raw material. A child that pastes five hundred lines back into your context has spent what it was hired to save.
-
-**Done when** a subagent with no access to this conversation could execute the brief and know when it is finished.
-
-## Dispatch
-
-- Independent workstreams → dispatch together, in one step.
-- A workstream that consumes another's output → dispatch after that one returns.
-- Work that is really a lookup or a single edit → do it yourself; the brief costs more than the work.
-
-**Done when** every dispatched workstream is running or returned, and nothing is dispatched twice.
-
-## Verify
-
-A subagent's result is a claim, not a fact.
-
-- Check each load-bearing claim against the evidence pointer it supplied.
-- Re-run the check yourself when the claim decides the outcome.
-- Treat conflicting results as a signal to investigate, not to average.
-
-**Done when** every claim the final answer depends on has been checked against its evidence.
-
-## Integrate
-
-You own the outcome. Read the final diff, resolve the seams between workstreams, and state what changed in one coherent answer. When a workstream failed or was skipped, say so and cover the gap — a silent hole must not ship as a finished result.
-
-**Done when** the delivered result is one answer you can defend end to end, with no workstream unaccounted for.
-
-## Judgment
-
-Coordination has a price: a brief, a dispatch, a verification, an integration. Delegate when a workstream is substantial enough that its context and time outweigh that price, and keep the small, tightly coupled, or decision-heavy work in your own hands.
-
-Use the native subagent capabilities of the current environment. The mechanics differ between harnesses; this skill governs what you do with them, not which tool you call.
+Use the native subagent capabilities provided by the current environment. Do not assume or prescribe any particular tool, command, or delegation API.

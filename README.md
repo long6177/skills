@@ -12,7 +12,7 @@ A collection of first-party [agent skills](https://agentskills.io) by [@long6177
 | [worktree-run](skills/worktree-run/) | Gives different `harness`/LLM combinations the same start — a separate git worktree pinned to one base commit, the same task, a kept branch. Don't benchmark; just compare. Invoke as `/worktree-run`. |
 | [answer-to-md](skills/answer-to-md/) | Writes the assistant's complete answer to a UTF-8 Markdown file instead of a chat wall — formatting kept, timestamped filename, chat reply is just a link. Invoke as `$answer-to-md`. |
 | [no-more-unknown](skills/no-more-unknown/) | Explains concepts, plans, and code in words you already know — no circular definitions, and a list of the words it left undefined. Invoke as `/no-more-unknown`. |
-| [multi-agent-orchestration](skills/multi-agent-orchestration/) | Turns a multi-workstream task into briefed, dispatched, verified subagent work — split at the seams, ask for evidence pointers instead of raw material, integrate one answer you can defend. |
+| [multi-agent-orchestration](skills/multi-agent-orchestration/) | Acts as the central orchestrator on multi-workstream tasks — delegates independent pieces to native subagents, stays accountable for priorities and the final outcome, and synthesizes one coherent result. |
 
 ## Install
 
